@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -130,7 +130,7 @@ export default function HeroSlider() {
     setCurrent((prev) => (prev - 1 + DEFAULT_SLIDES.length) % DEFAULT_SLIDES.length);
   };
 
-  const slideVariants = {
+  const slideVariants: Variants = {
     enter: (dir: number) => ({
       opacity: 0,
       scale: dir > 0 ? 1.1 : 0.9,
@@ -158,7 +158,7 @@ export default function HeroSlider() {
   const currentSlide = DEFAULT_SLIDES[current];
 
   // For staggered text animations
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -169,7 +169,7 @@ export default function HeroSlider() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 40, filter: "blur(10px)" },
     show: { 
       opacity: 1, 
