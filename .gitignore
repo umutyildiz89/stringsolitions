@@ -1,0 +1,35 @@
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local databases
+backend/db.sqlite3
+db.sqlite3
+
+# Uploads and temporary media
+backend/uploads/
+uploads/
+
+# Node dependencies and build folders
+node_modules/
+.next/
+out/
+build/
+
+# Environment variables (secret credentials)
+.env
+.env.local
+.env.production
+.env.development
+
+# OS specific files
+.DS_Store
+Thumbs.db
